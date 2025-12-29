@@ -1,63 +1,76 @@
 body {
-    margin: 0;
-    font-family: 'Cairo', sans-serif;
-    background: linear-gradient(#ffb6c1, #ffc0cb);
-    color: #fff;
-    text-align: center;
+    margin:0;
+    font-family: Poppins, sans-serif;
+    background: linear-gradient(135deg,#ff9a9e,#fad0c4);
+    color:white;
+    text-align:center;
+    overflow-x:hidden;
 }
 
-header {
-    padding: 30px;
+.dark {
+    background: linear-gradient(135deg,#0f0c29,#302b63,#24243e);
 }
 
-h1 {
-    font-size: 40px;
+.lock {
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 }
 
-section {
-    padding: 30px;
+.lock input {
+    padding:10px;
+    border-radius:10px;
+    border:none;
+    margin:10px;
 }
 
-.counter {
+.lock button {
+    padding:10px 20px;
+    border:none;
+    border-radius:20px;
+    background:pink;
+}
+
+.glass {
     background: rgba(255,255,255,0.2);
-    border-radius: 20px;
-    margin: 20px;
+    border-radius:25px;
+    padding:30px;
+    margin:20px;
 }
 
-#time {
-    font-size: 22px;
-    margin-top: 10px;
+.gallery {
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
 }
 
-.photos img {
-    width: 250px;
-    border-radius: 20px;
-    box-shadow: 0 0 20px pink;
+.gallery img {
+    width:150px;
+    margin:10px;
+    border-radius:20px;
+    animation: float 4s infinite;
+    box-shadow:0 10px 30px rgba(255,105,180,0.6);
 }
 
-.videos video {
-    width: 250px;
-    margin: 10px;
-    border-radius: 15px;
+video {
+    width:240px;
+    margin:10px;
+    border-radius:20px;
 }
 
-.messages {
-    background: rgba(255,255,255,0.15);
-    border-radius: 20px;
-    margin: 20px;
-    font-size: 18px;
+.dark-btn {
+    position:fixed;
+    top:10px;
+    right:10px;
+    border:none;
+    border-radius:20px;
+    padding:10px;
 }
 
-footer {
-    padding: 20px;
-    font-size: 14px;
-}
-
-/* قلوب وفراشات */
-.hearts::before {
-    content: "🌸 🦋 💖 🌹 🦋 💕 🌸";
-    position: fixed;
-    top: 10px;
-    width: 100%;
-    font-size: 24px;
+@keyframes float {
+    0%{transform:translateY(0)}
+    50%{transform:translateY(-10px)}
+    100%{transform:translateY(0)}
 }
