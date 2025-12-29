@@ -7,35 +7,37 @@
 </head>
 <body>
 
-<!-- PASSWORD SCREEN -->
-<div id="lockScreen" class="lock">
-    <h2>💖 Enter Our Secret Date 💖</h2>
-    <input type="password" id="password" placeholder="DD/MM">
-    <button onclick="checkPassword()">Unlock ❤️</button>
-    <p id="error"></p>
+<!-- LOCK SCREEN -->
+<div id="lockScreen" class="lock-screen">
+    <div class="lock-box">
+        <h2>💖 Our Secret Date 💖</h2>
+        <input id="password" type="text" placeholder="DD/MM">
+        <button id="unlockBtn">Unlock</button>
+        <p id="errorMsg"></p>
+    </div>
 </div>
 
-<!-- MAIN CONTENT -->
-<div id="siteContent" style="display:none">
+<!-- SITE CONTENT -->
+<div id="siteContent" class="hidden">
 
-<audio id="music" autoplay loop>
+<audio id="music" loop>
     <source src="music.mp3" type="audio/mpeg">
 </audio>
 
-<button class="dark-btn" onclick="toggleDark()">🌙 Night Mode</button>
+<button class="night-btn" onclick="toggleDark()">🌙</button>
 
-<header class="fade-in">
+<header>
     <h1>Mohamed ❤️ Sally</h1>
-    <p>Our love started on June 27, 2025 at 2:30 AM</p>
+    <p>Since June 27, 2025 – 2:30 AM</p>
 </header>
 
-<section class="counter glass fade-in">
+<section class="glass">
     <h2>Love Timer ⏳</h2>
     <div id="time"></div>
 </section>
 
-<section class="photos fade-in">
-    <h2>Our Photo Gallery 📸</h2>
+<section>
+    <h2>Our Photos 📸</h2>
     <div class="gallery">
         <img src="1.png">
         <img src="2.png">
@@ -44,22 +46,15 @@
     </div>
 </section>
 
-<section class="videos fade-in">
+<section>
     <h2>Our Videos 🎥</h2>
     <video controls src="1.mp4"></video>
     <video controls src="2.mp4"></video>
     <video controls src="3.mp4"></video>
 </section>
 
-<section class="messages glass fade-in">
-    <p>
-        Sally ❤️<br><br>
-        You are my forever, my peace, my love 🌸
-    </p>
-</section>
-
 <footer>
-    <p>Made with ❤️ by Mohamed</p>
+    Made with ❤️ by Mohamed
 </footer>
 
 </div>
