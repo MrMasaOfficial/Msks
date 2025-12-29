@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    font-family: 'Cairo', sans-serif;
+    background: linear-gradient(#ffb6c1, #ffc0cb);
+    color: #fff;
+    text-align: center;
+}
+
+header {
+    padding: 30px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+section {
+    padding: 30px;
+}
+
+.counter {
+    background: rgba(255,255,255,0.2);
+    border-radius: 20px;
+    margin: 20px;
+}
+
+#time {
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+.photos img {
+    width: 250px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px pink;
+}
+
+.videos video {
+    width: 250px;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+.messages {
+    background: rgba(255,255,255,0.15);
+    border-radius: 20px;
+    margin: 20px;
+    font-size: 18px;
+}
+
+footer {
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* قلوب وفراشات */
+.hearts::before {
+    content: "🌸 🦋 💖 🌹 🦋 💕 🌸";
+    position: fixed;
+    top: 10px;
+    width: 100%;
+    font-size: 24px;
+}
