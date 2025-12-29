@@ -1,49 +1,68 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Mohamed ❤️ Sally</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Mohamed ❤️ Sally</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="hearts"></div>
+<!-- PASSWORD SCREEN -->
+<div id="lockScreen" class="lock">
+    <h2>💖 Enter Our Secret Date 💖</h2>
+    <input type="password" id="password" placeholder="DD/MM">
+    <button onclick="checkPassword()">Unlock ❤️</button>
+    <p id="error"></p>
+</div>
 
-<header>
-    <h1>محمد ❤️ سالي</h1>
-    <p>قصة حب بدأت يوم 27 / 6 / 2025 🕊️</p>
+<!-- MAIN CONTENT -->
+<div id="siteContent" style="display:none">
+
+<audio id="music" autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<button class="dark-btn" onclick="toggleDark()">🌙 Night Mode</button>
+
+<header class="fade-in">
+    <h1>Mohamed ❤️ Sally</h1>
+    <p>Our love started on June 27, 2025 at 2:30 AM</p>
 </header>
 
-<section class="counter">
-    <h2>عدّاد الحب ⏳</h2>
+<section class="counter glass fade-in">
+    <h2>Love Timer ⏳</h2>
     <div id="time"></div>
 </section>
 
-<section class="photos">
-    <h2>ذكرياتنا 📸</h2>
-    <img src="love.png" alt="Love">
+<section class="photos fade-in">
+    <h2>Our Photo Gallery 📸</h2>
+    <div class="gallery">
+        <img src="1.png">
+        <img src="2.png">
+        <img src="3.png">
+        <img src="4.png">
+    </div>
 </section>
 
-<section class="videos">
-    <h2>فيديوهاتنا 🎥</h2>
+<section class="videos fade-in">
+    <h2>Our Videos 🎥</h2>
     <video controls src="1.mp4"></video>
     <video controls src="2.mp4"></video>
     <video controls src="3.mp4"></video>
 </section>
 
-<section class="messages">
-    <h2>رسائل حب 💌</h2>
+<section class="messages glass fade-in">
     <p>
-        سالي ❤️  
-        من أول لحظة عرفتك فيها وأنا عرفت إنك مش شخص عادي  
-        إنتي أحلى صدفة حصلت في حياتي  
-        وهنفضل مع بعض مهما حصل 🌷
+        Sally ❤️<br><br>
+        You are my forever, my peace, my love 🌸
     </p>
 </section>
 
 <footer>
-    <p>Made with ❤️ by Mohamed for Sally</p>
+    <p>Made with ❤️ by Mohamed</p>
 </footer>
+
+</div>
 
 <script src="script.js"></script>
 </body>
