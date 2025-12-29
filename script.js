@@ -1,7 +1,12 @@
-// PASSWORD SYSTEM
-let tries = 0;
+// SPLASH
+setTimeout(() => {
+    document.getElementById("splash").style.display = "none";
+    document.getElementById("lockScreen").classList.remove("hidden");
+}, 2500);
 
-document.getElementById("unlockBtn").onclick = function () {
+// PASSWORD
+let tries = 0;
+document.getElementById("unlockBtn").onclick = () => {
     const pass = document.getElementById("password").value.trim();
     const msg = document.getElementById("errorMsg");
 
@@ -19,16 +24,13 @@ document.getElementById("unlockBtn").onclick = function () {
 
 // TIMER
 const startDate = new Date("2025-06-27T02:30:00");
-
 setInterval(() => {
-    const now = new Date();
-    let diff = now - startDate;
-
-    let s = Math.floor(diff / 1000) % 60;
-    let m = Math.floor(diff / 60000) % 60;
-    let h = Math.floor(diff / 3600000) % 24;
-    let d = Math.floor(diff / 86400000) % 30;
-    let mo = Math.floor(diff / 2592000000);
+    const diff = new Date() - startDate;
+    const s = Math.floor(diff / 1000) % 60;
+    const m = Math.floor(diff / 60000) % 60;
+    const h = Math.floor(diff / 3600000) % 24;
+    const d = Math.floor(diff / 86400000) % 30;
+    const mo = Math.floor(diff / 2592000000);
 
     document.getElementById("time").innerText =
         `${mo} Months • ${d} Days • ${h} Hours • ${m} Minutes • ${s} Seconds`;
